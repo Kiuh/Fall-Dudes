@@ -33,6 +33,14 @@ public class GameController : MonoBehaviour
         SetupPlayer();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            playerCamera.UnlockCursor();
+        }
+    }
+
     private void OnPlayerReachStartLine()
     {
         timer.StartTimer();
